@@ -49,9 +49,9 @@ const HomePage = () => {
 
         {/* Benefits Section */}
         <div className="text-left mb-10 w-full max-w-4xl">
-          <h3 className="text-xl font-semibold text-blue-700 mb-4 text-center">
+          {/* <h3 className="text-xl font-semibold text-blue-700 mb-4 text-center">
             Key Benefits of One Nation, One Election
-          </h3>
+          </h3> */}
 
           {/* All 2 Images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -104,7 +104,7 @@ const HomePage = () => {
         {/* CTA Button */}
         <button
           onClick={() => navigate("/register")}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md"
+          className="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md"
         >
           Register Now
         </button>
