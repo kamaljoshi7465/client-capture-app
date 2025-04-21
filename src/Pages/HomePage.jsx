@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <Header heading="One Nation, One Election – Synchronizing Indian Democracy" />
+      <Header heading="One Nation, One Election" />
 
       <div className="flex flex-col items-center justify-center py-10 px-4 text-center">
         {/* Banner Image */}
@@ -25,7 +25,7 @@ const HomePage = () => {
         </div>
 
         {/* Introduction Text */}
-        <div className="mb-8 text-gray-700 max-w-3xl">
+        <div className="mb-8 text-gray-700 max-w-2xl">
           {/* <h2 className="text-2xl font-semibold text-blue-800 mb-4">
             Participate in a Historic Movement!
           </h2>
@@ -48,7 +48,7 @@ const HomePage = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="text-left mb-10 w-full max-w-4xl">
+        <div className="text-left mb-10 w-full max-w-2xl">
           {/* <h3 className="text-xl font-semibold text-blue-700 mb-4 text-center">
             Key Benefits of One Nation, One Election
           </h3> */}

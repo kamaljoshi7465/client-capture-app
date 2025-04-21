@@ -9,7 +9,7 @@ const Footer = () => {
           href="https://www.ryientsoft.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black-700 font-semibold hover:underline"
+          className="text-orange-700 font-semibold hover:underline"
         >
           Ryientsoft Technology
         </a>
