@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../Components/Layout";
 import Header from "../Components/Header";
 import ONOEImage from "../Assets/one-nation-one-election.png";
+import HistoricalImage from "../Assets/historic-movement.png";
 import BenifitImage1 from "../Assets/benifits-1.png";
 import BenifitImage2 from "../Assets/benifits-2.png";
 
@@ -15,7 +16,7 @@ const HomePage = () => {
 
       <div className="flex flex-col items-center justify-center py-10 px-4 text-center">
         {/* Banner Image */}
-        <div className="max-w-4xl mb-8">
+        <div className="max-w-2xl mb-8">
           <img
             src={ONOEImage}
             alt="One Nation One Election Banner"
@@ -25,7 +26,7 @@ const HomePage = () => {
 
         {/* Introduction Text */}
         <div className="mb-8 text-gray-700 max-w-3xl">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          {/* <h2 className="text-2xl font-semibold text-blue-800 mb-4">
             Participate in a Historic Movement!
           </h2>
           <p className="mb-4">
@@ -38,7 +39,12 @@ const HomePage = () => {
             Whether you're a student, working professional, or a concerned
             citizen — your voice and participation matter. Let’s shape a better
             future together.
-          </p>
+          </p> */}
+          <img
+            src={HistoricalImage}
+            alt="One Nation One Election Banner"
+            className="w-full rounded-xl shadow-lg object-cover"
+          />
         </div>
 
         {/* Benefits Section */}
@@ -62,7 +68,7 @@ const HomePage = () => {
           </div>
 
           {/* Benefits List */}
-          <ul className="list-disc list-inside text-gray-800 space-y-3">
+          {/* <ul className="list-disc list-inside text-gray-800 space-y-3">
             <li>
               <strong>Cost Savings:</strong> Reduces frequent election-related
               expenses for the government and Election Commission.
@@ -92,7 +98,7 @@ const HomePage = () => {
               <strong>Level Playing Field:</strong> Prevents some parties from
               gaining unfair advantage through continuous campaigning.
             </li>
-          </ul>
+          </ul> */}
         </div>
 
         {/* CTA Button */}
