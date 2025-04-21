@@ -1,18 +1,26 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ThankYouImage from "../Assets/thankyou.png"
 
 const SuccessPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-xl mx-auto text-center py-16 px-4">
-      <h1 className="text-3xl font-bold text-green-600 mb-4">🎉 Registration Successful!</h1>
-      <p className="text-lg text-gray-700 mb-8">
-        Thank you for registering for the Chess Tournament 2025. We've received your details.
-      </p>
+    <div className="max-w-3xl mx-auto text-center py-16 px-4">
+      <Link
+        to="https://www.ryientsoft.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={ThankYouImage}
+          alt="One Nation One Election Banner"
+          className="w-full rounded-xl shadow-lg object-cover hover:opacity-90 transition"
+        />
+      </Link>
       <button
         onClick={() => navigate("/")}
-        className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700"
+        className="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 mt-6"
       >
         Go to Home
       </button>

@@ -39,8 +39,8 @@ const RegistrationForm = () => {
 
   return (
     <Layout>
-      <Header heading="One Nation One Election - Registration Form" showBackButton={true} />
-      <div className="max-w-8xl mx-auto px-4 py-8">
+      <Header heading="One Nation, One Election - Registration Form" showBackButton={true} />
+      <div className="max-w-3xl mx-auto px-4 py-8">
         <form
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"

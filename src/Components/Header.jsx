@@ -17,7 +17,8 @@ const Header = ({
   };
 
   return (
-    <div className="flex justify-between items-center px-4 py-4 border-b shadow-sm bg-white">
+    // <div className="flex justify-between items-center px-4 py-4 border-b shadow-sm bg-white max-w-3xl">
+    <div className="relative flex items-center justify-center px-4 py-4 border-b shadow-sm bg-white max-w-3xl mx-auto">
       {/* Back Button */}
       {showBackButton && (
         <button
