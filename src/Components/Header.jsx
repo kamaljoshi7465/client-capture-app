@@ -42,9 +42,14 @@ const Header = ({
       )}
 
       {/* Heading (Centered) */}
-      <h2 className="text-xl font-bold text-[#df670e] flex-1 text-center">
-        {heading}
-      </h2>
+      <div className="w-full flex-column">
+        <h2 className="text-xl font-bold text-[#df670e] flex-1 text-center">
+          {heading}
+        </h2>
+        <div className="text-[#df670e] flex-1 text-center">
+          One Nation, One Election
+        </div>
+      </div>
 
       {/* Admin Login Button */}
       {showAdminLoginButton && (
