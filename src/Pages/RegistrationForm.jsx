@@ -17,6 +17,8 @@ const RegistrationForm = () => {
     address1: "",
     address2: "",
     pin_code: "",
+    role: "",
+    gender: "",
   });
 
   const handleChange = (e) => {
@@ -30,7 +32,11 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "chess-customer-registrations"), formData);
+      const data = {
+        ...formData,
+        createdAt: new Date().toISOString(),
+      };
+      await addDoc(collection(db, "chess-customer-registrations"), data);
       navigate("/success");
     } catch (error) {
       console.error("Error saving form:", error);
@@ -95,7 +101,39 @@ const RegistrationForm = () => {
             required
             onChange={handleChange}
           />
-
+                    <div className="flex flex-col md:col-span-1">
+            <label className="font-medium text-sm mb-1">Gender *</label>
+            <select
+              name="gender"
+              required
+              onChange={handleChange}
+              className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select your gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div className="flex flex-col md:col-span-2">
+            <label className="font-medium text-sm mb-1">Role *</label>
+            <select
+              name="role"
+              required
+              onChange={handleChange}
+              className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select your role</option>
+              <option value="Student">Student</option>
+              <option value="Parent">Parent</option>
+              <option value="Working Professional">Working Professional</option>
+              <option value="Athlete">Athlete</option>
+              <option value="Fitness Enthusiast">Fitness Enthusiast</option>
+              <option value="Coach/Trainer">Coach/Trainer</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
           <div className="md:col-span-2 text-center">
             <button
               type="submit"
