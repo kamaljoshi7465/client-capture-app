@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../Components/Layout";
 import Header from "../Components/Header";
@@ -6,15 +6,34 @@ import ONOEImage from "../Assets/one-nation-one-election.png";
 import HistoricalImage from "../Assets/historic-movement.png";
 import BenifitImage1 from "../Assets/benifits-1.png";
 import BenifitImage2 from "../Assets/benifits-2.png";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../Firebase/firebase";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [userCount, setUserCount] = useState(0);
+
+  useEffect(() => {
+    const fetchUserCount = async () => {
+      try {
+        const snapshot = await getDocs(collection(db, "chess-customer-registrations"));
+        setUserCount(snapshot.size);
+      } catch (error) {
+        console.error("Failed to fetch user count:", error);
+      }
+    };
+
+    fetchUserCount();
+  }, []);
 
   return (
     <Layout>
-      <Header heading="One Nation, One Election" />
+      <Header heading="Price Money Cross Country Race" />
 
       <div className="flex flex-col items-center justify-center py-10 px-4 text-center">
+        <div className="w-full max-w-2xl text-right py-4 text-lg text-orange-600 font-semibold">
+          Total Registered Participants: {userCount}
+        </div>
         {/* Banner Image */}
         <div className="max-w-2xl mb-8">
           <img
