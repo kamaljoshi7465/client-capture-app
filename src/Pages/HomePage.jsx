@@ -30,10 +30,10 @@ const HomePage = () => {
     <Layout>
       <Header heading="Price Money Cross Country Race" />
 
-      <div className="flex flex-col items-center justify-center py-10 px-4 text-center">
-        <div className="w-full max-w-2xl text-right py-4 text-lg text-orange-600 font-semibold">
+      <div className="flex flex-col items-center justify-center py-8 px-4 text-center">
+        {/* <div className="w-full max-w-2xl text-center py-4 text-lg text-orange-600 font-semibold">
           Total Registered Participants: {userCount}
-        </div>
+        </div> */}
         {/* Banner Image */}
         <div className="max-w-2xl mb-8">
           <img
@@ -45,20 +45,6 @@ const HomePage = () => {
 
         {/* Introduction Text */}
         <div className="mb-8 text-gray-700 max-w-2xl">
-          {/* <h2 className="text-2xl font-semibold text-blue-800 mb-4">
-            Participate in a Historic Movement!
-          </h2>
-          <p className="mb-4">
-            Be a part of the revolutionary step toward efficient and unified
-            governance. Your registration supports the vision of synchronized
-            elections that save resources, boost development, and promote a
-            stronger democracy.
-          </p>
-          <p className="mb-4">
-            Whether you're a student, working professional, or a concerned
-            citizen — your voice and participation matter. Let’s shape a better
-            future together.
-          </p> */}
           <img
             src={HistoricalImage}
             alt="One Nation One Election Banner"
@@ -68,11 +54,6 @@ const HomePage = () => {
 
         {/* Benefits Section */}
         <div className="text-left mb-10 w-full max-w-2xl">
-          {/* <h3 className="text-xl font-semibold text-blue-700 mb-4 text-center">
-            Key Benefits of One Nation, One Election
-          </h3> */}
-
-          {/* All 2 Images */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <img
               src={BenifitImage1}

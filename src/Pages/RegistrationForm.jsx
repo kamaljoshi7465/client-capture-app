@@ -45,7 +45,7 @@ const RegistrationForm = () => {
 
   return (
     <Layout>
-      <Header heading="One Nation, One Election - Registration Form" showBackButton={true} />
+      <Header heading="Marathon Noida - Registration Form" showBackButton={true} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <form
           onSubmit={handleSubmit}
