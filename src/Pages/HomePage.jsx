@@ -4,6 +4,7 @@ import Layout from "../Components/Layout";
 import Header from "../Components/Header";
 import ONOEImage from "../Assets/one-nation-one-election.png";
 import HistoricalImage from "../Assets/historic-movement.png";
+import PriceMoneyImage from "../Assets/price-money.png"
 import BenifitImage1 from "../Assets/benifits-1.png";
 import BenifitImage2 from "../Assets/benifits-2.png";
 import { Helmet } from "react-helmet";
@@ -47,6 +48,14 @@ const HomePage = () => {
             <img
               src={ONOEImage}
               alt="One Nation One Election Banner"
+              className="w-full rounded-xl shadow-lg object-cover"
+            />
+          </div>
+
+          <div className="max-w-2xl mb-8">
+            <img
+              src={PriceMoneyImage}
+              alt="One Nation One Election price maney Banner"
               className="w-full rounded-xl shadow-lg object-cover"
             />
           </div>
