@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -33,6 +34,7 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const data = {
         ...formData,
@@ -42,6 +44,8 @@ const RegistrationForm = () => {
       navigate("/success");
     } catch (error) {
       console.error("Error saving form:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -183,9 +187,12 @@ const RegistrationForm = () => {
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md"
+                disabled={loading}
+                className={`${
+                  loading ? "bg-gray-400" : "bg-[#df670e] hover:bg-orange-700"
+                } text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md`}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
@@ -195,7 +202,14 @@ const RegistrationForm = () => {
   );
 };
 
-const Input = ({ name, label, onChange, required, type = "text", placeholder }) => (
+const Input = ({
+  name,
+  label,
+  onChange,
+  required,
+  type = "text",
+  placeholder,
+}) => (
   <div className="flex flex-col">
     <label className="font-medium text-sm mb-1">{label}</label>
     <input
@@ -203,7 +217,7 @@ const Input = ({ name, label, onChange, required, type = "text", placeholder }) 
       name={name}
       required={required}
       onChange={onChange}
-      placeholder={placeholder} 
+      placeholder={placeholder}
       className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   </div>
