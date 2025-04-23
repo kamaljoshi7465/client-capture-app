@@ -119,12 +119,14 @@ const HomePage = () => {
           </div>
 
           {/* CTA Button */}
+          <div className="fixed bottom-10 left-50 right-3 flex justify-center z-50">
           <button
             onClick={() => navigate("/register")}
             className="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md"
           >
             Register Now
           </button>
+          </div>
         </div>
       </Layout>
     </>
