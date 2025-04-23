@@ -8,7 +8,7 @@ import PriceMoneyImage from "../Assets/price-money.png";
 import BenifitImage1 from "../Assets/benifits-1.png";
 import BenifitImage2 from "../Assets/benifits-2.png";
 import { Helmet } from "react-helmet";
-import Artical from "../Components/Artical";
+import Article from "../Components/Article";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -118,7 +118,7 @@ const HomePage = () => {
             </li>
           </ul> */}
           </div>
-          <Artical />
+          <Article />
           {/* CTA Button */}
           <div className="fixed bottom-5 left-0 right-0 flex justify-center z-50">
             <button

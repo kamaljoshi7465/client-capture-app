@@ -79,12 +79,14 @@ const RegistrationForm = () => {
               name="first_name"
               label="First Name *"
               required
+              placeholder="Enter your first name"
               onChange={handleChange}
             />
             <Input
               name="last_name"
               label="Last Name *"
               required
+              placeholder="Enter your last name"
               onChange={handleChange}
             />
             <Input
@@ -92,6 +94,7 @@ const RegistrationForm = () => {
               label="Email *"
               required
               type="email"
+              placeholder="Enter your email"
               onChange={handleChange}
             />
             <Input
@@ -99,40 +102,47 @@ const RegistrationForm = () => {
               label="Phone Number *"
               required
               type="tel"
+              placeholder="Enter your phone number"
               onChange={handleChange}
             />
             <Input
               name="city"
               label="City *"
               required
+              placeholder="Enter your city"
               onChange={handleChange}
             />
             <Input
               name="state"
               label="State *"
               required
+              placeholder="Enter your state"
               onChange={handleChange}
             />
             <Input
               name="address1"
               label="Address Line 1 *"
               required
+              placeholder="Enter your address line 1"
               onChange={handleChange}
             />
             <Input
               name="address2"
               label="Address Line 2"
+              placeholder="Enter your address line 2"
               onChange={handleChange}
             />
             <Input
               name="pin_code"
               label="Pin Code *"
               required
+              placeholder="Enter your pin code"
               onChange={handleChange}
             />
             <Input
               name="reference_by"
               label="Reference by"
+              placeholder="Enter who referred you"
               onChange={handleChange}
             />
             <div className="flex flex-col md:col-span-1">
@@ -185,7 +195,7 @@ const RegistrationForm = () => {
   );
 };
 
-const Input = ({ name, label, onChange, required, type = "text" }) => (
+const Input = ({ name, label, onChange, required, type = "text", placeholder }) => (
   <div className="flex flex-col">
     <label className="font-medium text-sm mb-1">{label}</label>
     <input
@@ -193,6 +203,7 @@ const Input = ({ name, label, onChange, required, type = "text" }) => (
       name={name}
       required={required}
       onChange={onChange}
+      placeholder={placeholder} 
       className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   </div>
