@@ -4,10 +4,11 @@ import Layout from "../Components/Layout";
 import Header from "../Components/Header";
 import ONOEImage from "../Assets/one-nation-one-election.png";
 import HistoricalImage from "../Assets/historic-movement.png";
-import PriceMoneyImage from "../Assets/price-money.png"
+import PriceMoneyImage from "../Assets/price-money.png";
 import BenifitImage1 from "../Assets/benifits-1.png";
 import BenifitImage2 from "../Assets/benifits-2.png";
 import { Helmet } from "react-helmet";
+import Artical from "../Components/Artical";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -70,7 +71,7 @@ const HomePage = () => {
           </div>
 
           {/* Benefits Section */}
-          <div className="text-left mb-10 w-full max-w-2xl">
+          <div className="text-left w-full max-w-2xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               <img
                 src={BenifitImage1}
@@ -117,15 +118,15 @@ const HomePage = () => {
             </li>
           </ul> */}
           </div>
-
+          <Artical />
           {/* CTA Button */}
-          <div className="fixed bottom-10 left-50 right-3 flex justify-center z-50">
-          <button
-            onClick={() => navigate("/register")}
-            className="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all shadow-md"
-          >
-            Register Now
-          </button>
+          <div className="fixed bottom-5 left-0 right-0 flex justify-center z-50">
+            <button
+              onClick={() => navigate("/register")}
+              className="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-6 rounded-full text-3xl font-medium transition-all shadow-md"
+            >
+              Register Now
+            </button>
           </div>
         </div>
       </Layout>
