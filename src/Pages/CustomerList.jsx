@@ -75,6 +75,7 @@ const CustomerList = () => {
       "Address 1": c.address1,
       "Address 2": c.address2,
       "Registration Date": new Date(c.createdAt).toLocaleString(),
+      "Reference By": c.reference_by
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(formattedData);
@@ -173,6 +174,7 @@ const CustomerList = () => {
                     <th className="border p-3 font-semibold">Pin Code</th>
                     <th className="border p-3 font-semibold">Address 1</th>
                     <th className="border p-3 font-semibold">Address 2</th>
+                    <th className="border p-3 font-semibold">Reference By</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -194,6 +196,7 @@ const CustomerList = () => {
                       <td className="border p-3">{c.pin_code}</td>
                       <td className="border p-3">{c.address1}</td>
                       <td className="border p-3">{c.address2}</td>
+                      <td className="border p-3">{c.reference_by}</td>
                     </tr>
                   ))}
                 </tbody>

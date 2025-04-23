@@ -20,6 +20,7 @@ const RegistrationForm = () => {
     pin_code: "",
     role: "",
     gender: "",
+    reference_by: "",
   });
 
   const handleChange = (e) => {
@@ -129,6 +130,11 @@ const RegistrationForm = () => {
               required
               onChange={handleChange}
             />
+            <Input
+              name="reference_by"
+              label="Reference by"
+              onChange={handleChange}
+            />
             <div className="flex flex-col md:col-span-1">
               <label className="font-medium text-sm mb-1">Gender *</label>
               <select
@@ -143,7 +149,7 @@ const RegistrationForm = () => {
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div className="flex flex-col md:col-span-2">
+            <div className="flex flex-col md:col-span-1">
               <label className="font-medium text-sm mb-1">Role *</label>
               <select
                 name="role"
