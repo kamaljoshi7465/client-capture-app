@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../Firebase/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import Layout from "../Components/Layout";
 import Header from "../Components/Header";
@@ -36,6 +36,38 @@ const RegistrationForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
+      const registrationsRef = collection(db, "chess-customer-registrations");
+      const q = query(
+        registrationsRef,
+        where("email", "==", formData.email),
+      );
+  
+      const q2 = query(
+        registrationsRef,
+        where("phone", "==", formData.phone)
+      );
+  
+      const [emailSnapshot, phoneSnapshot] = await Promise.all([
+        getDocs(q),
+        getDocs(q2),
+      ]);
+  
+      if (!emailSnapshot.empty || !phoneSnapshot.empty) {
+        alert("A registration with this email or phone number already exists.");
+        setLoading(false);
+        return;
+      }
+      else if (!emailSnapshot.empty) {
+        alert("A registration with this email already exists.");
+        setLoading(false);
+        return;
+      } 
+      else if (!phoneSnapshot.empty) {
+        alert("A registration with this phone number already exists.");
+        setLoading(false);
+        return;
+      }
+
       const data = {
         ...formData,
         createdAt: new Date().toISOString(),
