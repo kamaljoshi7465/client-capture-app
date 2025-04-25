@@ -35,7 +35,7 @@ const HomePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Layout>
-        <Header heading="Price Money Cross Country Race" />
+        <Header heading="Prize Money Cross Country Race" />
 
         <div className="flex flex-col items-center justify-center py-2 px-4 text-center">
           {/* <div className="w-full max-w-2xl text-center py-4 text-lg text-orange-600 font-semibold">
