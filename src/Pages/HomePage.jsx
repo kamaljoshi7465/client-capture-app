@@ -44,6 +44,7 @@ const HomePage = () => {
           <div className="w-full max-w-2xl text-center py-2 text-lg text-orange-600 font-semibold">
             #ISupport1Nation1Election
           </div>
+          <div class="fixed bottom-5 left-0 right-0 flex justify-center px-4 py-4"><button class="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-6 rounded-full text-1xl font-medium transition-all shadow-md"> Certificates will be available for download after May 4, 2025.</button></div>
           {/* Banner Image */}
           <div className="max-w-2xl mb-8">
             <img
