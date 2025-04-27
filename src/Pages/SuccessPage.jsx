@@ -34,7 +34,7 @@ const SuccessPage = () => {
       </Helmet>
       <Layout>
       <Header heading="Prize Money Cross Country Race" />
-      <div className="max-w-3xl mx-auto text-center py-16 px-4">
+      <div className="max-w-3xl mx-auto text-center py-4 px-4">
         <Link
           to="https://www.ryientsoft.com/"
           target="_blank"
@@ -48,7 +48,7 @@ const SuccessPage = () => {
         </Link>
         <button
           onClick={() => navigate("/")}
-          className="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 mt-6"
+          className="bg-[#df670e] hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg mt-6"
         >
           Go to Home
         </button>
