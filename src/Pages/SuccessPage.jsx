@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ThankYouImage from "../Assets/thankyou.png";
 import { Helmet } from "react-helmet";
+import Layout from "../Components/Layout";
+import Header from "../Components/Header";
 
 const SuccessPage = () => {
   const navigate = useNavigate();
@@ -30,7 +32,9 @@ const SuccessPage = () => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="max-w-3xl mx-auto text-center py-16 px-4">
+      <Layout>
+      <Header heading="Prize Money Cross Country Race" />
+      <div className="max-w-3xl mx-auto text-center py-4 px-4">
         <Link
           to="https://www.ryientsoft.com/"
           target="_blank"
@@ -44,11 +48,12 @@ const SuccessPage = () => {
         </Link>
         <button
           onClick={() => navigate("/")}
-          className="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 mt-6"
+          className="bg-[#df670e] hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg mt-6"
         >
           Go to Home
         </button>
       </div>
+      </Layout>
     </>
   );
 };
