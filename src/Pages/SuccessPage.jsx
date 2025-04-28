@@ -48,7 +48,7 @@ const SuccessPage = () => {
         </Link>
         <button
           onClick={() => navigate("/")}
-          className="bg-[#df670e] hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg mt-6"
+          className="bg-[#df670e] text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 mt-6"
         >
           Go to Home
         </button>
