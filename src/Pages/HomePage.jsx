@@ -1,12 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Layout from "../Components/Layout";
 import Header from "../Components/Header";
-import ONOEImage from "../Assets/one-nation-one-election.png";
-import HistoricalImage from "../Assets/historic-movement.png";
-import PriceMoneyImage from "../Assets/price-money.png";
-import BenifitImage1 from "../Assets/benifits-1.png";
-import BenifitImage2 from "../Assets/benifits-2.png";
+import ONOEImage from "../Assets/Marathon/one-nation-one-election.png";
+import HistoricalImage from "../Assets/Marathon/historic-movement.png";
+import PriceMoneyImage from "../Assets/Marathon/price-money.png";
+import BenifitImage1 from "../Assets/Marathon/benifits-1.png";
+import BenifitImage2 from "../Assets/Marathon/benifits-2.png";
 import { Helmet } from "react-helmet";
 import Article from "../Components/Article";
 
@@ -41,8 +43,11 @@ const HomePage = () => {
           {/* <div className="w-full max-w-2xl text-center py-4 text-lg text-orange-600 font-semibold">
           Total Registered Participants: {userCount}
         </div> */}
-          <div className="w-full max-w-2xl text-center py-2 text-lg text-orange-600 font-semibold">
-            #ISupport1Nation1Election
+          <div className="w-full max-w-2xl mx-auto flex justify-center items-center gap-4 py-1 text-lg font-semibold text-orange-600">
+            <span>#ISupport1Nation1Election</span>
+            <Link to="/blogs" className="hover:underline flex items-center">
+              View Blog Gallery <FontAwesomeIcon icon={faArrowRight} className="ml-1" />
+            </Link>
           </div>
           <div class="bottom-5 left-0 right-0 flex justify-center px-4 py-4"><button class="bg-[#df670e] hover:bg-orange-700 text-white px-8 py-6 rounded-full text-1xl font-medium transition-all shadow-md"> Certificates will be available for download after May 4, 2025.</button></div>
           {/* Banner Image */}

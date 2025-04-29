@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import SuccessPage from './Pages/SuccessPage';
 import CustomerList from './Pages/CustomerList';
 import AdminLogin from './Pages/AdminLogin';
+import Blogs from './Pages/Blogs';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/customers" element={<CustomerList />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </Router>
   );
